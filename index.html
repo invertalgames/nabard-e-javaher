@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Invertal | Nabard-e-Javaher</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/randomize.js"></script>
+  <script src="js/opponent-hand.js"></script>
+  <script src="js/player-hand.js"></script>
+  <script src="js/opponent-turn.js"></script>
+  <script src="js/player-turn.js"></script>
+  <script src="js/attack.js"></script>
+  <script src="js/start.js"></script>
+  <link href="style.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+</head>
+<body>
+  <div class="motion">
+	<div class="motion-card opponent-card special miner"></div>
+	<div class="motion-card opponent-card special gem-breaker"></div>
+	<div class="motion-card opponent-card special gem-thief"></div>
+	<div class="motion-card opponent-card regular talc gem"></div>
+	<div class="motion-card opponent-card regular amber gem"></div>
+	<div class="motion-card opponent-card regular pearl gem"></div>
+	<div class="motion-card opponent-card regular rhodochrosite gem"></div>
+	<div class="motion-card opponent-card regular apatite gem"></div>
+	<div class="motion-card opponent-card regular jade gem"></div>
+	<div class="motion-card opponent-card royal amethyst gem"></div>
+	<div class="motion-card opponent-card royal alexandrite gem"></div>
+	<div class="motion-card opponent-card royal ruby gem"></div>
+	<div class="motion-card opponent-card royal diamond gem"></div>
+	<div class="motion-card player-card special miner"></div>
+	<div class="motion-card player-card special gem-breaker"></div>
+	<div class="motion-card player-card special gem-thief"></div>
+	<div class="motion-card player-card regular talc gem"></div>
+	<div class="motion-card player-card regular amber gem"></div>
+	<div class="motion-card player-card regular pearl gem"></div>
+	<div class="motion-card player-card regular rhodochrosite gem"></div>
+	<div class="motion-card player-card regular apatite gem"></div>
+	<div class="motion-card player-card regular jade gem"></div>
+	<div class="motion-card player-card royal amethyst gem"></div>
+	<div class="motion-card player-card royal alexandrite gem"></div>
+	<div class="motion-card player-card royal ruby gem"></div>
+	<div class="motion-card player-card royal diamond gem"></div>
+  </div>
+  <div class="opponent-hand"></div>
+  <div class="player-hand"></div>
+<div class="container-fluid mt-4">
+  <div class="row opponent-battle-ground" data-score="0">
+    <div class="col-v col-a">
+		<div class="cell opponent-a-trap trap-line"></div>
+		<div class="cell opponent-a-attack attack-line"></div>
+    </div>
+    <div class="col-v col-b">
+		<div class="cell opponent-b-trap trap-line"></div>
+		<div class="cell opponent-b-attack attack-line"></div>
+    </div>
+    <div class="col-v col-c">
+		<div class="cell opponent-c-trap trap-line"></div>
+		<div class="cell opponent-c-attack attack-line"></div>
+    </div>
+	<div class="col-v col-d">
+		<div class="cell opponent-d-trap trap-line"></div>
+		<div class="cell opponent-d-attack attack-line"></div>
+    </div>
+	<div class="col-v">
+		<div class="opponent-mine mine">
+			<div class="card opponent-card special miner face-down" data-point="0" data-special="10" title="Miner | Draw a card from your mine."></div>
+			<div class="card opponent-card special gem-breaker face-down" data-point="0" data-special="40" title="Gem Breaker | Destroy your enemy's gem."></div>
+			<div class="card opponent-card special gem-thief face-down" data-point="0" data-special="40" title="Gem Thief | Steal your enemy's card."></div>
+			<div class="card opponent-card regular talc gem face-down" data-point="1" data-special="1" title="Talc | Mohs Hardness: 1"></div>
+			<div class="card opponent-card regular amber gem face-down" data-point="2" data-special="2" title="Amber | Mohs Hardness: 2"></div>
+			<div class="card opponent-card regular pearl gem face-down" data-point="3" data-special="3" title="Pearl | Mohs Hardness: 3"></div>
+			<div class="card opponent-card regular rhodochrosite gem face-down" data-point="4" data-special="4" title="Rhodochrosite | Mohs Hardness: 4"></div>
+			<div class="card opponent-card regular apatite gem face-down" data-point="5" data-special="5" title="Apatite | Mohs Hardness: 5"></div>
+			<div class="card opponent-card regular jade gem face-down" data-point="6" data-special="6" title="Jade | Mohs Hardness: 6"></div>
+			<div class="card opponent-card royal amethyst gem face-down" data-point="7" data-special="7" title="Amethyst | Mohs Hardness: 7"></div>
+			<div class="card opponent-card royal alexandrite gem face-down" data-point="8" data-special="8" title="Alexandrite | Mohs Hardness: 8"></div>
+			<div class="card opponent-card royal ruby gem face-down" data-point="9" data-special="9" title="Ruby | Mohs Hardness: 9"></div>
+			<div class="card opponent-card royal diamond gem face-down" data-point="10" data-special="10" title="Diamond | Mohs Hardness: 10"></div>
+		</div>
+   </div>
+  </div>
+  <div class="row player-battle-ground" data-score="0">
+    <div class="col-v col-a">
+		<div class="cell player-a-attack attack-line"></div>
+		<div class="cell player-a-trap trap-line"></div>
+    </div>
+    <div class="col-v col-b">
+		<div class="cell player-b-attack attack-line"></div>
+		<div class="cell player-b-trap trap-line"></div>
+    </div>
+    <div class="col-v col-c">
+		<div class="cell player-c-attack attack-line"></div>
+		<div class="cell player-c-trap trap-line"></div>
+    </div>
+	<div class="col-v col-d">
+		<div class="cell player-d-attack attack-line"></div>
+		<div class="cell player-d-trap trap-line"></div>
+    </div>
+	<div class="col-v">
+		<div class="player-mine mine">
+			<div class="card player-card special miner face-down" data-point="0" data-special="10" title="Miner | Draw a card from your mine."></div>
+			<div class="card player-card special gem-breaker face-down" data-point="0" data-special="10" title="Gem Breaker | Destroy your enemy's gem."></div>
+			<div class="card player-card special gem-thief face-down" data-point="0" data-special="10" title="Gem Thief | Steal your enemy's card."></div>
+			<div class="card player-card regular talc gem face-down" data-point="1" data-special="1" title="Talc | Mohs Hardness: 1"></div>
+			<div class="card player-card regular amber gem face-down" data-point="2" data-special="2" title="Amber | Mohs Hardness: 2"></div>
+			<div class="card player-card regular pearl gem face-down" data-point="3" data-special="3" title="Pearl | Mohs Hardness: 3"></div>
+			<div class="card player-card regular rhodochrosite gem face-down" data-point="4" data-special="4" title="Rhodochrosite | Mohs Hardness: 4"></div>
+			<div class="card player-card regular apatite gem face-down" data-point="5" data-special="5" title="Apatite | Mohs Hardness: 5"></div>
+			<div class="card player-card regular jade gem face-down" data-point="6" data-special="6" title="Jade | Mohs Hardness: 6"></div>
+			<div class="card player-card royal amethyst gem face-down" data-point="7" data-special="7" title="Amethyst | Mohs Hardness: 7"></div>
+			<div class="card player-card royal alexandrite gem face-down" data-point="8" data-special="8" title="Alexandrite | Mohs Hardness: 8"></div>
+			<div class="card player-card royal ruby gem face-down" data-point="9" data-special="9" title="Ruby | Mohs Hardness: 9"></div>
+			<div class="card player-card royal diamond gem face-down" data-point="10" data-special="10" title="Diamond | Mohs Hardness: 10"></div>
+		</div>
+   </div>
+  </div>
+</div>
+</body>
+</html>

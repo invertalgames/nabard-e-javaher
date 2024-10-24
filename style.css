@@ -1,0 +1,206 @@
+:root{
+	--default-color: #e9e9e9;
+}
+body{
+	background-color: var(--default-color);
+}
+.container-fluid{
+	max-width:100vmin;
+}
+.row{
+	position: absolute;
+}
+.motion-card:after, .card:after{
+	content:'';
+}
+.cell, .card, .card:after, .motion-card, .motion-card:after{
+	width:15vmin;
+    height: 15vmin;
+	border-radius: 2vmin;
+	display:block;
+}
+.motion-card, .card{
+	box-shadow: 0 0 1vmin 0 rgba(0,0,0,0.5);
+	background:url('img/cards-webp/back.webp') center center;
+	transition:transform 0.2s ease-in-out 0s;
+}
+.diamond:after{
+	background:url('img/cards-webp/10-diamond.webp') center center;
+}
+.ruby:after{
+	background:url('img/cards-webp/9-ruby.webp') center center;
+}
+.alexandrite:after{
+	background:url('img/cards-webp/8-alexandrite.webp') center center;
+}
+.amethyst:after{
+	background:url('img/cards-webp/7-amethyst.webp') center center;
+}
+.jade:after{
+	background:url('img/cards-webp/6-jade.webp') center center;
+}
+.apatite:after{
+	background:url('img/cards-webp/5-apatite.webp') center center;
+}
+.rhodochrosite:after{
+	background:url('img/cards-webp/4-rhodochrosite.webp') center center;
+}
+.pearl:after{
+	background:url('img/cards-webp/3-pearl.webp') center center;
+}
+.amber:after{
+	background:url('img/cards-webp/2-amber.webp') center center;
+}
+.talc:after{
+	background:url('img/cards-webp/1-talc.webp') center center;
+}
+.gem-thief.motion-card{
+	z-index:2;
+}
+.miner.motion-card{
+	z-index:1;
+}
+.gem-thief:after{
+	background:url('img/cards-webp/0-steal.webp') center center;
+}
+.gem-breaker:after{
+	background:url('img/cards-webp/0-destroy.webp') center center;
+}
+.miner:after{
+	background:url('img/cards-webp/0-miner.webp') center center;
+}
+.card, .card:after, .motion-card, .motion-card:after{
+	border-width: 0;
+	margin:0 auto;
+	background-size:100% 100%;
+}
+.card{
+	z-index:4;
+}
+.cell{
+	border: 0.3vmin solid #aaa;
+	box-sizing: content-box;
+}
+.face-down:after{
+	opacity: 0;
+	transition:opacity 0.3s ease-in-out 0s;
+}
+.motion-card:hover:after{
+	opacity: 0.6;
+}
+.player-battle-ground .mine .face-down:hover:after{
+	opacity: 0.6;
+}
+.player-battle-ground .face-down:hover:after, .player-hand .face-down:hover:after{
+	opacity: 1;
+}
+.started .attacker .attack-line .face-down:after, .started .defender .attack-line .face-down:after{
+	opacity: 1;
+}
+.col-v{
+	flex: 0 0 auto;
+	width: 20%;
+	border: 0.3vmin solid transparent;
+	transition:all 0.3s ease-in-out 0s;
+}
+.opponent-battle-ground{}
+.opponent-battle-ground .cell, .player-battle-ground .cell{
+	margin-bottom: 2vmin;
+}
+.opponent-mine .card{
+	margin-bottom: -14vmin;
+}
+.player-mine, .opponent-mine{
+	width:15vmin;
+	text-align:center;
+}
+.player-battle-ground{
+	bottom:1.5rem;
+}
+.player-battle-ground .col-v, .opponent-battle-ground .col-v{
+	padding-top:1vmin;
+}
+.player-mine .card, .opponent-hand .card{
+	margin-bottom: -14vmin;
+}
+.opponent-hand{
+	position:fixed;
+	top:0;
+	left:0;
+}
+.player-hand{
+	position:absolute;
+    left: calc(50% - 42vmin);
+    top: calc(50% - 8vmin);
+	width:75vmin;
+	height:15vmin;
+}
+.player-hand .card{
+	float:right;
+	margin-left:-6vmin;
+}
+.left0{
+	left:0 !important;
+}
+.cell .card{
+	transition:opacity 0.3s ease-in-out 0s, transform 0.3s ease-in-out 0s;
+}
+.started .trap-line .player-card.face-down:hover{
+	opacity:0.6 !important;
+}
+.cell .card:nth-child(2){
+	margin-top:-15.6vmin;
+}
+.cell .card:nth-child(3){
+	margin-top:-15.4vmin;
+}
+.cell .card:nth-child(4){
+	margin-top:-15.2vmin;
+}
+.draggable{
+	transform: scale(1.0);
+}
+.draggable:hover{
+	cursor:grab;
+	transform: scale(1.1);
+}
+.draggable:active{
+	cursor:grabbing;
+	z-index:6;
+}
+.start{}
+.action-btn{
+	margin-top:18vmin;
+	display:none;
+}
+.select-a-column{}
+.select-a-column:hover{
+	cursor:pointer;
+	border: 0.3vmin solid #aaa;
+}
+.selected-column{
+	border: 0.3vmin solid #aaa !important;
+	box-shadow:0 0 1vmin rgba(0,0,0,0.5);
+	cursor:pointer;
+}
+.pointer-events-none:active{
+	pointer-events:none;
+}
+.motion-card{
+	position:fixed;
+	top:0;
+	left:0;
+	opacity:0;
+	pointer-events:none;
+	z-index:3;
+}
+.motion-effect, .motion-effect:after{
+	transition: all 0.5s ease-in-out 0s; 
+}
+.mine .card {
+    opacity: 1 !important;
+	z-index:5;
+}
+.opponent-battle-ground .face-down{
+	pointer-events:none !important;
+}
