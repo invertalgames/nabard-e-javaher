@@ -4,3 +4,7 @@ You can read the game guide and watch the tutorial here: <a href="https://www.in
 This simple web-game is made with jQuery, Oct 2024.
 <br>
 You can buy the physical version from <a href="https://invertal.com" target="_blank">invertal.com</a>.
+Follow Me:<br>
+<a href="https://www.linkedin.com/in/mehdi-mousavi-ba5b371bb/">LinkedIn</a>
+<br>
+<a href="https://instagram.com/invertalgames">Instagram</a>
