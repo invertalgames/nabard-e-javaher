@@ -97,6 +97,9 @@ body{
 .started .attacker .attack-line .face-down:after, .started .defender .attack-line .face-down:after{
 	opacity: 1;
 }
+.started .opponent-battle-ground .cell.attack-line .card {
+    pointer-events: all !important;
+}
 .col-v{
 	flex: 0 0 auto;
 	width: 20%;
