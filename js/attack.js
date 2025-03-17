@@ -388,6 +388,7 @@ function motions(){
 				alert('Player Score: ' + $('.player-battle-ground').attr('data-score') + '\nOpponent Score: ' + $('.opponent-battle-ground').attr('data-score'));
 				if($('.player-battle-ground').attr('data-score') >= 25){
 					alert('+25 Scores! You Won!');
+					confetti_js();
 				}
 				if($('.opponent-battle-ground').attr('data-score') >= 25){
 					alert('Opponent has +25 scores. Game Over...');
