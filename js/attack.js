@@ -387,11 +387,12 @@ function motions(){
 				}
 				alert('Player Score: ' + $('.player-battle-ground').attr('data-score') + '\nOpponent Score: ' + $('.opponent-battle-ground').attr('data-score'));
 				if($('.player-battle-ground').attr('data-score') >= 25){
-					alert('+25 Scores! You Won!');
+					alert('+25 Scores! You Win!');
 					confetti_js();
 				}
 				if($('.opponent-battle-ground').attr('data-score') >= 25){
 					alert('Opponent has +25 scores. Game Over...');
+					$('.gameover').fadeIn(500);
 				}
 				if($('.opponent-battle-ground').attr('data-score') < 25 && $('.player-battle-ground').attr('data-score') < 25){
 					$('body').removeClass('started');
